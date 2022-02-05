@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Accounts {
-    public double getAccountsDetails() {
+    public double getAccountsDetails() throws IOException {
         double account = 0.0;
         try {
             FileReader fr = new FileReader("resources\\accounts.txt");
@@ -18,8 +18,6 @@ public class Accounts {
 
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
             e.printStackTrace();
         }
         return account;
