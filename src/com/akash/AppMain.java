@@ -25,17 +25,13 @@ public class AppMain {
             case 1:
                 Inventory inventory = new Inventory();
                 inventory.getInventory();
+
+
             case 2:
 
        }
-//        Accounts account1 = new Accounts();
-//        account1.getAccountsDetails();
 
 
-
-        String s1 = "Rice 10 50";
-        getPrice(s1);
-        getIngredientName(s1);
     }
 
     private static void getIngredientName(String s1) {

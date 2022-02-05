@@ -12,9 +12,8 @@ public class Inventory {
     public void getInventory() {
         try {
             FileReader inventory = new FileReader("resources\\Inventory.txt");
-            BufferedReader br1 = new BufferedReader(inventory);
-            List<String> inventoryList = br1.lines().collect(Collectors.toList());
-
+            BufferedReader br = new BufferedReader(inventory);
+            List<String> inventoryList = br.lines().collect(Collectors.toList());
 
             HashMap<String,Double> ingredientPriceMap = new HashMap<>();
             HashMap<String,Integer> ingredientQuantityMap = new HashMap<>();
@@ -34,6 +33,8 @@ public class Inventory {
         }
 
     }
+
+    //method to get the quantity i.e mmiddle part in the inventory file
     private static int getIngredientQuantity(String s1) {
         String[] parts = s1.split(" ");
         return Integer.parseInt(parts[1]);
@@ -41,7 +42,7 @@ public class Inventory {
     }
 
 
-
+//method to get the ingredient  name
     private static String getIngredientName(String s1) {
         String[] parts = s1.split(" ");
         return parts[0];
