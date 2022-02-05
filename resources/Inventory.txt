@@ -7,5 +7,3 @@ Potatoes 10 20
 Coriander 10 10
 Carrots 10 50
 Butter 10 100
-
-
