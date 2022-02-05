@@ -1,0 +1,11 @@
+Rice 10 50
+Pulses 10 120
+Tomatoes 10 80
+Onions 10 100
+Milk 10 80
+Potatoes 10 20
+Coriander 10 10
+Carrots 10 50
+Butter 10 100
+
+
