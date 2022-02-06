@@ -3,23 +3,23 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class OrderPlacement {
-    AccountManagement am=new AccountManagement();
+    Inventory in = new Inventory();
+    AccountManagement am = new AccountManagement();
     int count =0;
     Scanner sc=new Scanner(System.in);
     String orderStr= sc.next();
-    Orders order= Orders.valueOf(orderStr);
-    int quantity=sc.nextInt();
-    Map<Orders, Integer> placedOrder=new HashMap<>();
+    int quantity = sc.nextInt();
+    Map<String, Integer> placedOrder = new HashMap<>();
     public void placeOrder() {
 
 
 
         boolean sufficientIngridients=true;
-        if(sufficientIngridients==true){
-               System.out.println("Order Placed");
-                double account= am.getAccountDetails()+ order.getPrice();
-                placedOrder.put(order,quantity);
-                count=count++;
+        if(sufficientIngridients==true) {
+            System.out.println("Order Placed");
+            double account = am.getAccountDetails() + in.recipePriceMap.get(orderStr);
+            placedOrder.put(orderStr, quantity);
+            //count=count++;
         }
         else{
             System.out.println("Insufficient Ingridients, If you wish to continue enter yes");
@@ -29,17 +29,24 @@ public class OrderPlacement {
             }
             else if(str.equalsIgnoreCase("no")){
                 mainMenu();
-            }
-            else{
+            } else {
                 System.out.println("Enter Yes/No");
             }
         }
     }
 
-    public void placeOrderIngridients(){
+    public void placeOrderIngridients() {
 
     }
-    public void mainMenu(){
+
+    public void totalSales() {
+        System.out.println("Total dishes sold so far" + placedOrder.size());
+        for (int i = 0; i < placedOrder.size() - 1; i++) {
+            System.out.println(placedOrder.entrySet());
+        }
+    }
+
+    public void mainMenu() {
         System.out.println("""
                 1. View Available Ingredients
                 2. Order Specific Ingredients
@@ -49,12 +56,6 @@ public class OrderPlacement {
                 6. Place Order
                 7. Exit from the program
                 """);
-    }
-    public void totalSales(int count){
-        System.out.println("Total dishes sold so far"+ count);
-        for(int i=0;i<placedOrder.size()-1;i++){
-            System.out.println(placedOrder.entrySet());
-        }
     }
 
 }
