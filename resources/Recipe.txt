@@ -1,0 +1,3 @@
+Sandwich Capsicum 1 Bread 2 Cheese 1 Tomato 1 250
+GajarHalwa Carrots 2 Sugar 0.2 Butter 0.2  200
+FriedRice Rice 0.2 Carrots 1 Capsicum 1 Tomato 1  200
