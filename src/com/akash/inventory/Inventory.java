@@ -21,11 +21,6 @@ public class Inventory {
         List<HashMap> mapList = new ArrayList<>();
 
 
-//        for (String s : inventoryList) {
-//            ingredientPriceMap.put(getIngredientName(s), getPrice(s));
-//            ingredientQuantityMap.put(getIngredientName(s), getIngredientQuantity(s));
-
-        //   }
         for(int i = 0; i<inventoryList.size();i++) {
             String s = inventoryList.get(i);
             ingredientPriceMap.put(getIngredientName(s), getPrice(s));
