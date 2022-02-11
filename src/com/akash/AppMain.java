@@ -19,7 +19,7 @@ public class AppMain {
         Scanner sc = new Scanner(System.in);
 
         for(int  i = 0; i <= 2; i++) {
-            System.out.println("Enter Your Option");
+
             System.out.println("Command #1 : View Available Ingredients");
             System.out.println("Command #2 : Order Specific Ingredients");
             System.out.println("Command #3 : View Total Sales");
@@ -27,6 +27,7 @@ public class AppMain {
             System.out.println("Command #5 : View Net Profit" );
             System.out.println("Command #6 : Place Order");
             System.out.println("Command #7 : Exit Program");
+            System.out.println("Enter Your Option");
             int option = sc.nextInt();
             switch (option) {
                 case 1://View Available Ingredient
@@ -35,11 +36,11 @@ public class AppMain {
                     Set<Map.Entry<String, Integer>> entries = result.get(1).entrySet();
 
                     for (Map.Entry<String, Integer> entry : entries) {
-                        System.out.println("Ingredient: " + entry.getKey() + " Quantity: " + entry.getValue());
+                        System.out.println("Ingredient: " + entry.getKey() + " Quantity: " + entry.getValue() + "Kgs");
                     }
 
 
-                case 6:
+                case 6://
                     CustomerOrder customerOrder = new CustomerOrder();
                     customerOrder.order("Sandwich",1);
 
